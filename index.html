@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- <div class="name">
+            <h3>Enter your Email : </h3>
+            <input type="text" id="input">
+        </div> -->
+        <br>
+        <button>Generate Question Number</button>
+        <br>
+        <div id="parent">
+            
+        </div>
+    </div>
+    <script src= "https://smtpjs.com/v3/smtp.js"> 
+    </script>
+
+    <script>
+        const button = document.querySelector('button');
+        
+        button.addEventListener("click", function() {
+
+            let num1 = Math.floor(Math.random() * 42) + 1;
+            let num2 = Math.floor(Math.random() * 42) + 1;
+            let num3 = Math.floor(Math.random() * 42) + 1;
+            let num4 = Math.floor(Math.random() * 42) + 1;
+
+            let newDiv = document.createElement("div");
+            newDiv.innerHTML = `<a href="">Question ${num1}</a>
+            <a href="">Question ${num2}</a>
+            <a href="">Question ${num3}</a>
+            <a href="">Question ${num4}</a>`
+            let parentEle = document.getElementById("parent")
+            parentEle.appendChild(newDiv)
+
+            // let email = document.getElementById('input').value;
+            // console.log(email)
+            // Email.send({
+            //     Host: "smtp.elasticmail.com",
+            //     Username: "shawchandan8357@gmail.com",
+            //     Password: "CA23C9D095E59986E1BAF248330216AD690A",
+            //     To: "shawchandan8357@gmail.com",
+            //     From: "shawchandan8357@gmail.com",
+            //     Subject: "Sending Email using javascript",
+            //     Body: `Question ${num1} : Question ${num2} : Question ${num3} : Question ${num4}`,
+            // })
+            // .then(function (message) {
+            // alert("mail sent successfully")
+            // });
+
+
+        }, {once : true});
+
+    </script>
+</body>
+</html>

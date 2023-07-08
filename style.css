@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border: 1px solid black;
+    width: 100%;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.name {
+    display: flex;
+    border: 1px solid black;
+    padding: 20px;
+    width: 30%;
+}
+.name h3 {
+    margin-right: 10px;
+}
+button{
+    padding: 10px;
+    width: 30%;
+}
+#parent{
+    width: 30%;
+}

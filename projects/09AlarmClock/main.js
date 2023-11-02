@@ -1,3 +1,6 @@
+let hour1 = document.getElementById("hourInput"),
+minute1 = document.getElementById("minInput"),
+sec1 = document.getElementById("secInput")
 function currentTime(){
     const date = new Date()
     let hour = date.getHours()
@@ -10,11 +13,6 @@ function currentTime(){
     const time = document.getElementById('time')
     time.innerHTML = `${hour}:${minute}:${sec}`
     const alarmTime = document.getElementById("alarm_time")
-    
-    let hour1 = document.getElementById("hourInput"),
-    minute1 = document.getElementById("minInput"),
-    sec1 = document.getElementById("secInput")
-
     const alarmAudio = new Audio("https://www.sjap.nl/Take-off-warning.mp3")
 
     if (hour == hour1.value && minute == minute1.value && sec == sec1.value) {
@@ -25,7 +23,14 @@ function currentTime(){
 setInterval(currentTime,1000)
 
 
-    
+function setAlarm (currentElement) {
+    const heading = document.createElement('h1')
+    heading.classList.add('alarm_css')
+    heading.innerText = `${hour1.value}:${minute1.value}:${sec1.value}`
+    currentElement.parentElement.replaceChild(heading,currentElement.previousElementSibling)
+    const alarm_btn = document.getElementById('set_alarm')
+    alarm_btn.setAttribute('disabled', '')
+}
 // setInterval(
 //     function currentTime () {
 //         const date = new Date()

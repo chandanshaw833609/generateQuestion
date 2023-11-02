@@ -8,12 +8,13 @@
 </head>
 <body>
     <div class="container">
-        <h1 id="time">06:45:42</h1>
+        <h1 id="time" class="alarm_css">06:45:42</h1>
         <div id="alarm_time">
             <div><label for="">Hour : </label><input type="number" id="hourInput" value="01"></div>
             <div><label for="">Minute : </label><input type="number" id="minInput" value="01"></div>
             <div><label for="">Second : </label><input type="number" id="secInput" value="01"></div>
         </div>
+        <button id="set_alarm" onclick="setAlarm(this)">Set Alarm </button>
     </div>
     <script src="main.js"></script>
 </body>

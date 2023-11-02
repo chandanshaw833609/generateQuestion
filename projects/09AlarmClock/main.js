@@ -24,7 +24,7 @@ function currentTime(){
         alarmAudio.loop = true
     }
 }
-setInterval(currentTime,1000)
+setInterval(currentTime,60000)
 
 
     

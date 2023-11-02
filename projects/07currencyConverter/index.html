@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currecny Converter</title>
+</head>
+<body>
+    <div class="container">
+        <div class="input1">
+            <input type="number" id="inputAmount">
+            <label for="">From</label>
+            <select name="" class="inputCurrencyType">
+                <option value="usd">usd</option>
+            </select>
+        </div>
+        <button id="swap" onclick="swapInOut()">Swap</button>
+        <div class="input2">
+            <input type="number" id="outputAmount" disabled>
+            <label for="" style="margin-right: 18px; text-align: center;">To</label>
+            <select name="" class="outputCurrencyType">
+                <option value="inr">inr</option>
+            </select>
+        </div>
+        <button onclick="convert()" id="getOutput">Convert</button>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>

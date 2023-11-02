@@ -2,24 +2,22 @@ function currentTime(){
     const date = new Date()
     let hour = date.getHours()
     let minute = date.getMinutes()
+    let sec = date.getSeconds()
     if (hour >= 12) hour = hour - 12
+    if (hour < 10) hour = "0" + hour
+    if (minute < 10) minute = "0" + minute
+    if (sec<10) sec = "0" + sec
     const time = document.getElementById('time')
-    time.innerHTML = `${hour}:${minute}`
+    time.innerHTML = `${hour}:${minute}:${sec}`
     const alarmTime = document.getElementById("alarm_time")
     
-    const hour1 = document.getElementById("hour"),
-    minute1 = document.getElementById("minute")
+    let hour1 = document.getElementById("hourInput"),
+    minute1 = document.getElementById("minInput"),
+    sec1 = document.getElementById("secInput")
 
-    for (let i = 1; i <= 12; i++) {
-        hour1.insertAdjacentHTML("beforeend",`<option value="${i}">${i}</option>`)
-    }
-
-    for (let i = 0; i <= 60; i++) {
-        minute1.insertAdjacentHTML("beforeend",`<option value="${i}">${i}</option>`)
-    }
     const alarmAudio = new Audio("https://www.sjap.nl/Take-off-warning.mp3")
 
-    if (hour == hour1.value && minute == minute1.value) {
+    if (hour == hour1.value && minute == minute1.value && sec == sec1.value) {
         alarmAudio.play()
         alarmAudio.loop = true
     }

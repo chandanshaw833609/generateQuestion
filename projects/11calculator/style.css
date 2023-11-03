@@ -28,6 +28,7 @@ html, body {
     border-radius: 8px;
     margin-bottom: 5px;
     background-color: white;
+    overflow-wrap: break-word;
 }
 
 .btn_css, #allClear, #delete, #bracket, #equals {
